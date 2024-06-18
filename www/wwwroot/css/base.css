@@ -1,0 +1,51 @@
+/* base.css */
+
+/* Основные цвета */
+:root {
+    --main-bg-color: #333; /* Основной фоновый цвет */
+    --main-text-color: #fff; /* Основной цвет текста */
+    --primary-color: #d9534f; /* Красный цвет для кнопок и навбара */
+    --accent-color: #ffcccb;  /* Акварельный цвет (не используется в текущем коде) */
+    --footer-bg-color: #292929; /* Цвет фона футера */
+    --footer-text-color: #ccc; /* Цвет текста в футере */
+}
+
+/* Базовые стили для тела документа */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Общие стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color); /* Цвет для заголовков */
+}
+
+/* Стили для ссылок */
+a {
+    color: var(--primary-color); /* Основной цвет ссылок */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color); /* Цвет ссылок при наведении (не используется в текущем коде) */
+    text-decoration: underline;
+}
+
+/* Кнопки */
+button, .btn {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--main-bg-color);
+}

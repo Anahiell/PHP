@@ -1,0 +1,3 @@
+# .htaccess - файл настроек веб-сервера
+RewriteEngine on
+RewriteRule (.*) program.php

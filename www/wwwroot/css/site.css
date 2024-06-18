@@ -1,0 +1,110 @@
+/* site.css */
+
+/* Основные стили для тела документа */
+body {
+    min-height: 100vh; /* Минимальная высота равна высоте видимой области */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Навбар */
+.navbar {
+    background-color: var(--primary-color); /* Используем переменную из base.css */
+}
+
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+    color: var(--main-text-color); /* Используем переменную из base.css */
+}
+
+.nav-link {
+    color: var(--main-text-color);
+    border: 1px solid var(--primary-color); /* Красная окантовка */
+    padding: 0.5em 1em;
+    border-radius: 0.25rem;
+}
+
+.nav-link:hover {
+    background-color: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+/* Футер */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background: var(--footer-bg-color); /* Цвет фона футера */
+    color: var(--footer-text-color); /* Цвет текста в футере */
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #444; /* Фон для нижней части футера */
+    color: #fff;
+}
+
+.btn-outline-red {
+    border-color: #d9534f;
+    color: #d9534f;
+}
+
+.btn-outline-red:hover {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+/* Стили для основного контента */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+}
+
+main img {
+    max-width: 100%; /* Изображения будут адаптироваться к размеру контейнера */
+    height: auto; /* Поддержка соотношения сторон */
+    margin-bottom: 1em; /* Отступ между изображениями */
+}
+
+main p {
+    line-height: 1.6; /* Межстрочный интервал для текста */
+    margin-bottom: 1em; /* Отступ между абзацами */
+}
+
+main .view-content {
+    max-width: 800px; /* Максимальная ширина контента */
+    margin: auto; /* Центрирование контента */
+}

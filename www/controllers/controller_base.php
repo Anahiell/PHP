@@ -3,7 +3,7 @@
 
 class BaseController{
     private $db ;
-
+    private $view_path;
     public function __construct(){
         $this->db = null; 
     }
@@ -32,16 +32,33 @@ class BaseController{
             ]);
             exit;
     }
-    public function goto_view()
-    {
-        $class_name=get_class($this);
-        $controller_name = strtolower(
-            substr($class_name,0,strpos($class_name,'Controller')) );
-        $view_path = "./views/{$controller_name}/{$this->action}.php";
-        if(is_readable($view_path)){
+    public function goto_view() {
+       
+            $class_name = get_class($this);
+            $controller_name = strtolower(
+                substr($class_name, 0, strpos($class_name, 'Controller'))
+            );
+            if ($controller_name === 'api') {
+                global $action;
+                switch ($action) {
+                    case 'shop':
+                        $action = 'shop';
+                        break;
+                    case 'user':
+                        $controller_name = 'user';
+                        break;
+                    default:
+                        echo "No view result!!! 'Unknown action for api: $action'";
+                        return;
+                         
+                }
+                $view_path = "./views/{$controller_name}/{$this->action}/index.php";
+            }
+            else{
+            $view_path = "./views/{$controller_name}/{$this->action}.php";}
+        if (is_readable($view_path)) {
             include "./views/_shared/_layout.php";
-        }
-        else{
+        } else {
             echo "No view result!!! '$view_path'";
         }
     }
@@ -98,4 +115,5 @@ class BaseController{
         echo json_encode($arr);
         exit;
     }
+    
 }

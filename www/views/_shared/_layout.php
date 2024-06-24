@@ -27,7 +27,7 @@
                             <a class="btn btn-outline-red nav-link mx-2" href="/home/hmw1">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-outline-red nav-link mx-2" href="#">Магазин</a>
+                            <a class="btn btn-outline-red nav-link mx-2" href="/api/shop/install">Магазин</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-outline-red nav-link mx-2" href="#">О нас</a>

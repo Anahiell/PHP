@@ -17,3 +17,8 @@ config in fail httpd-vhosts.conf:
 		Require all granted
      </Directory>
 </VirtualHost>
+
+
+
+http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=my_project&table=shop_products
+DB: MY_PROJECT
